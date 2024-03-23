@@ -49,7 +49,6 @@ public class UserService {
         return "User's Data updated";
     }
 
-
     public String alloteBookToUser(Integer userId, Integer bookId) {
         User user=userRepo.findById(userId).orElse(null);
         Book book=bookRepo.findById(bookId).orElse(null);
@@ -74,3 +73,5 @@ public class UserService {
         return "Failed to deallocate book from user. User or book not found, or book is not allocated to the user.";
     }
 }
+
+
